@@ -48,4 +48,8 @@ Note
 - Most of the time, the gini index and entropy lead to the same results.
 - The gini index is slightly faster to compute and is the default criterion used in the DecisionTreeClassifier model of scikit-learn
 
+Regression Tree Classification
+- Measurement are done through MSE (Mean Square error)
+- Information Gain is the MSE. So the target variable will have the Mean Square Error.
+- Regression trees tries to find the split that produce the leaf where in each leaf, the target value are an average of closest possible to the mean value of labels in that leaf.
 
