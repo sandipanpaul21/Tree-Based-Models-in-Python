@@ -20,7 +20,7 @@ Decision boundary
 Logistic regression vs classification tree
 - A classification tree divides the feature space into rectangular regions.
 - In contrast, a linear model such as logistic regression produces only a single linear decision boundary dividing the feature space into two decision regions.
-- In other word, decision boundary produced by logistic regression is linear (straight line) while the boundaries produced by the classification tree divide the feature space into rectangular regions (Not a straight line but boxes/region it divides two class).
+- In other word, decision boundary produced by logistic regression is linear (line) while the boundaries produced by the classification tree divide the feature space into rectangular regions (Not a line but boxes/region it divides two class).
 
 Building block of Decision Tree 
 - Root: No parent node, question giving rise to two children nodes.
@@ -52,4 +52,69 @@ Regression Tree Classification
 - Measurement are done through MSE (Mean Square error)
 - Information Gain is the MSE. So the target variable will have the Mean Square Error.
 - Regression trees tries to find the split that produce the leaf where in each leaf, the target value are an average of closest possible to the mean value of labels in that leaf.
+
+
+PART 2 - BIAS VARIANCE TRADEOFF
+
+Supervised Learning
+- y = f(x), f is the function which is unknown
+- Our model output will be that function
+- But that function may contains various type of error like noise
+
+Goals of Supervised Learning
+- Find a model f1 that best approximates f: f1 ≈ f ()
+- f1 can be LogisticRegression, Decision Tree, Neural Network ...
+- Discard noise as much as possible.
+- End goal:f1 should acheive a low predictive error on unseen datasets.
+
+Difculties in Approximating f
+- Overtting: f1(x) fits the training set noise.
+- Undertting: f1 is not flexible enough to approximate f
+
+Generalization error 
+- Generalization Error of f1 : Does f1 generalize well on unseen data?
+- It can be decomposed as follows: Generalization Error of
+- f1 = bias + variance + irreducible error
+
+Bias
+- Bias: error term that tells you, on average, how much f1 ≠ f.
+- High Bias lead to underfitting
+
+Variance
+- Variance: tells you how much f is inconsistent over different training sets.
+- High Variance lead to overfitting
+
+- If we decrease Bias then Variance increase. Or Vice versa.
+
+Model Complexity
+- Model Complexity: sets the flexibility of f1.
+- Example: Maximum tree depth, Minimum samples per leaf etc etc.
+
+Bias Variance Tradeoff 
+- It is the problem is in trying to simultaneously minimize these two sources of error that prevent supervised learning algorithms from generalizing beyond their training set.
+
+Estimating the Generalization Error, Solution:
+- Split the data to training and test sets 
+- Fit t1 to the training set
+- Evaluate the error of f1 on the unseen test set
+- Generalization error of f1 ≈ test set error of f1.
+
+Better Model Evaluation with Cross-Validation
+- Test set should not be touched until we are confident about f1's performance.
+- Evaluating f1 on training set: biased estimate,f1 has already seen all training points.
+- Solution → K Cross-Validation (CV)
+
+Diagnose Variance Problems
+- If f1 suffers from high variance: CV error of f1 > training set error of f1.
+- f1 is said to overfit the training set. To remedy overtting:
+- decrease model complexity
+- for ex: decrease max depth, increase min samples per leaf
+- gather more data
+
+Diagnose Bias Problems
+- If f1 suffers from high bias: CV error of f1 ≈ training set error of f1 >> desired error.
+- f1 is said to underfit the training set. To remedy underfitting:
+- increase model complexity
+- for ex: increase max depth, decrease min samples per leaf
+- gather more relevant features
 
