@@ -44,6 +44,8 @@ Criteria to measure the impurity of a node I(node):
 2. Gini impurity (Classification) [Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the subset]
 3. Entropy (Classification) [Information entropy is the average rate at which information is produced by a stochastic source of data]
 
-
+Note 
+- Most of the time, the gini index and entropy lead to the same results.
+- The gini index is slightly faster to compute and is the default criterion used in the DecisionTreeClassifier model of scikit-learn
 
 
