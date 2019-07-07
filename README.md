@@ -118,3 +118,22 @@ Diagnose Bias Problems
 - for ex: increase max depth, decrease min samples per leaf
 - gather more relevant features
 
+Limitations of CARTs
+- Classication: can only produce orthogonal decision boundaries.
+- Sensitive to small variations in the training set.
+- High variance: unconstrained CARTs may overt the training set.
+- Solution: ensemble learning.
+
+Ensemble Learning
+- Train different models on the same dataset.
+- Let each model make its predictions.
+- Meta-model: aggregates predictions of individual models.
+- Final prediction: more robust and less prone to errors.
+- Best results: models are skillful in different ways.
+
+Steps in Ensemble learning 
+1. Training set is fed to different classifier like Decision tree, Logistic regression, KNN etc.
+2. Each classifier learn its parameter and make prediction
+3. Each prediction are fed into another model and that model make final prediction.
+4. That final model is known as ensemble model.
+
