@@ -232,3 +232,15 @@ Gradient Boosted Regression:
 
 Gradient Boosted Classication:
 - In sklearn: GradientBoostingClassifier .
+
+Gradient Boosting: Cons
+- GB involves an exhaustive search procedure.
+- Each CART is trained to find the best split points and features.
+- May lead to CARTs using the same split points and maybe the same features.
+
+Stochastic Gradient Boosting
+- Each tree is trained on a random subset of rows of the training data.
+- The sampled instances (40%-80% ofthe training set) are sampled without replacement.
+- Features are sampled (without replacement) when choosing split points.
+- Result: further ensemble diversity.
+- Effect: adding further variance to the ensemble oftrees.
