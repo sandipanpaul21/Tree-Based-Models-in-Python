@@ -250,3 +250,42 @@ PART 5 - MODEL TUNING
 - The hyperparameters of a machine learning model are parameters that are not learned from data.
 - They should be set prior to fitting the model to the training set.
 
+Parameters
+- learned from data
+- CART example: split-point of a node, split-feature of a node, ...
+
+Hyperparameters
+- not learned from data, set prior to training
+- CART example: max_depth , min_samples_leaf , splitting criterion ...
+
+What is hyperparameter tuning?
+- Problem: search for a set of optimal hyperparameters for a learning algorithm.
+- Solution: find a set of optimal hyperparameters that results in an optimal model.
+- Optimal model: yields an optimal score.
+- Score: in sklearn defaults to accuracy (classication) and R-squared (regression).
+- Cross validation is used to estimate the generalization performance.
+
+Why tune hyperparameters?
+- In sklearn, a model's default hyperparameters are not optimal for all problems.
+- Hyperparameters should be tuned to obtain the best model performance.
+
+Approaches to hyperparameter tuning
+- Grid Search
+- Random Search
+- Bayesian Optimization
+- GeneticAlgorithms etc.
+
+Grid search cross validation
+- Manually set a grid of discrete hyperparameter values.
+- Set a metric for scoring model performance.
+- Search exhaustively through the grid.
+- For each set of hyperparameters, evaluate each model's CV score.
+- The optimal hyperparameters are those ofthe model achieving the best CV score.
+
+Grid search cross validation: example
+- Hyperparameters grids:
+- max_depth = {2,3,4},
+- min_samples_leaf = {0.05, 0.1}
+- hyperparameter space = { (2,0.05) , (2,0.1) , (3,0.05), ... }
+- CV scores = { score , ... }
+- optimal hyperparameters = set of hyperparameters corresponding to the best CV score.
