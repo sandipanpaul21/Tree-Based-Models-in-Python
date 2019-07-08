@@ -244,3 +244,9 @@ Stochastic Gradient Boosting
 - Features are sampled (without replacement) when choosing split points.
 - Result: further ensemble diversity.
 - Effect: adding further variance to the ensemble oftrees.
+
+PART 5 - MODEL TUNING
+
+- The hyperparameters of a machine learning model are parameters that are not learned from data.
+- They should be set prior to fitting the model to the training set.
+
