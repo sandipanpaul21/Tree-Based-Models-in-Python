@@ -27,6 +27,7 @@ y_pred = bc.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy of Bagging Classifier: {:.3f}'.format(accuracy))
 
+
 # OOB EVALUATION IN SKLEARN
 # Import models and split utility function
 from sklearn.ensemble import BaggingClassifier
@@ -64,6 +65,7 @@ print('Test set accuracy: {:.3f}'.format(test_accuracy))
 # Print OOB accuracy
 print('OOB accuracy: {:.3f}'.format(oob_accuracy)
 # The difference between test and oob accuracy will be minimal which proved that we don't need cross validation to check the model accuracy
+
 
 # RANDOM FOREST REGRESSOR
 # Basic imports
@@ -107,7 +109,3 @@ sorted_importances_rf = importances_rf.sort_values()
 # Make a horizontal bar plot
 sorted_importances_rf.plot(kind= 'barh', color= 'lightgreen'); 
 plt.show()
-
-
-
-
