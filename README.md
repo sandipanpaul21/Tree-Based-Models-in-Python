@@ -289,3 +289,12 @@ Grid search cross validation: example
 - hyperparameter space = { (2,0.05) , (2,0.1) , (3,0.05), ... }
 - CV scores = { score , ... }
 - optimal hyperparameters = set of hyperparameters corresponding to the best CV score.
+
+Tuning a RF's Hyperparameters
+- Tuning is expensive
+
+Hyperparameter tuning:
+- computationally expensive,
+- sometimes leads to very slight improvement,
+- Weight the impact oftuning on the whole project.
+
