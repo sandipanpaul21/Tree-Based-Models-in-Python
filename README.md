@@ -41,8 +41,8 @@ Information Gain-
 
 Criteria to measure the impurity of a node I(node):
 1. Variance (Regression) [Variance reduction of a node N is defined as the total reduction of the variance of the target variable x due to the split at this node]
-2. Gini impurity (Classification) [Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the subset]
-3. Entropy (Classification) [Information entropy is the average rate at which information is produced by a stochastic source of data]
+2. Gini impurity (Classification) [Measure of impurity. Gini impurity is a measure of how often a randomly chosen element from the set would be incorrectly labeled if it was randomly labeled according to the distribution of labels in the subset]
+3. Entropy (Classification) [Measure of purity. Information entropy is the average rate at which information is produced by a stochastic source of data]
 
 Note 
 - Most of the time, the gini index and entropy lead to the same results.
@@ -191,3 +191,31 @@ Feature Importance
 - In sklearn :
 - how much the tree nodes use a particular feature (weighted average) to reduce impurity
 - accessed using the attribute feature_importance_
+
+
+Part 4 BOOSTING
+
+- Boosting refers to an ensemble method in which several models are trained sequentially with each model learning from the errors of its predecessors. 
+- Boosting: Ensemble method combining several weak learners to form a strong learner.
+- Weak learner: Model doing slightly better than random guessing.
+- Example of weak learner: Decision stump (CART whose maximum depth is 1).
+- Train an ensemble of predictors sequentially.
+- Each predictor tries to correct its predecessor.
+- Most popular boosting methods: AdaBoost, Gradient Boosting.
+
+Adaboost
+- Stands for Adaptive Boosting.
+- Each predictor pays more attention to the instances wrongly predicted by its predecessor.
+- Achieved by changing the weights of training instances.
+- Each predictor is assigned a coefficient α.
+- α depends on the predictor's training error
+- Learning rate: 0 < η ≤ 1. It help to shrink coeeficient α. It is the tradeoff between η and number of estimator.
+- Smaller number of η should be compensiated by high number of estimator.
+
+AdaBoost Classication:
+- Weighted majority voting.
+- In sklearn: AdaBoostClassifier.
+
+AdaBoost Regression:
+- Weighted average.
+- In sklearn: AdaBoostRegressor.
