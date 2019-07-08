@@ -170,3 +170,18 @@ Out Of Bag (OOB) instances
 - Since OOB instances are not seen by the model during training.
 - This can be used to estimate the performance of the model without the need of cross validation.
 - This technique is known as OOB evaluation
+
+Random Forest
+- Another ensemble model
+- Base estimator: Decision Tree
+- Each estimator is trained on a different bootstrap sample having the same size as the training set
+- RF introduces further randomization in the training of individual trees
+- d features are sampled at each node without replacement ( d < total number of features)
+
+Random Forests Classication:
+- Aggregates predictions by majority voting
+- RandomForestClassifier in scikit-learn
+
+Random Forests Regression:
+- Aggregates predictions through averaging
+- RandomForestRegressor in scikit-learn
