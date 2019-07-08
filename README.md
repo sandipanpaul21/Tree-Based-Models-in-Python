@@ -137,3 +137,25 @@ Steps in Ensemble learning
 3. Each prediction are fed into another model and that model make final prediction.
 4. That final model is known as ensemble model.
 
+
+PART 3 - BAGGING AND RANDOM FOREST
+
+Bagging
+- Bagging is an ensemble method involving training the same algorithm many times using different subsets sampled from the training data
+- In bagging, it uses same algorithim (only one algo is used)
+- However the model is not training on entire training set
+- Instead each model is trained on different subset of data
+- Bagging: Bootstrap Aggregation.
+- Uses a technique known as the bootstrap.
+- Reduces variance of individual models in the ensemble.
+- For example, suppose a training dataset contains 3 parts - a,b,c.
+- It create subset by method sample by replacement. For example aaa,aab,aba,acc,aca etc.
+- On this subset, the models are trained.
+
+Bagging Classication:
+- Aggregates predictions by majority voting (Final model is selected by voting).
+- BaggingClassifier in scikit-learn.
+
+Bagging Regression:
+- Aggregates predictions through averaging (Final model is selected by avergaing).
+- BaggingRegressor in scikit-learn.
