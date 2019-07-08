@@ -185,3 +185,9 @@ Random Forests Classication:
 Random Forests Regression:
 - Aggregates predictions through averaging
 - RandomForestRegressor in scikit-learn
+
+Feature Importance
+- Tree-based methods: enable measuring the importance of each feature in prediction.
+- In sklearn :
+- how much the tree nodes use a particular feature (weighted average) to reduce impurity
+- accessed using the attribute feature_importance_
