@@ -63,4 +63,5 @@ print('Test set accuracy: {:.3f}'.format(test_accuracy))
 
 # Print OOB accuracy
 print('OOB accuracy: {:.3f}'.format(oob_accuracy)
-# The difference between test and oob accuracy will ve minimal which proved that we don't need cross validation to check the model accuracy
+# The difference between test and oob accuracy will be minimal which proved that we don't need cross validation to check the model accuracy
+
