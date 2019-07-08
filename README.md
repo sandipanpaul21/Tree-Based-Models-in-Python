@@ -212,10 +212,23 @@ Adaboost
 - Learning rate: 0 < η ≤ 1. It help to shrink coeeficient α. It is the tradeoff between η and number of estimator.
 - Smaller number of η should be compensiated by high number of estimator.
 
-AdaBoost Classication:
+AdaBoost Classication
 - Weighted majority voting.
 - In sklearn: AdaBoostClassifier.
 
-AdaBoost Regression:
+AdaBoost Regression
 - Weighted average.
 - In sklearn: AdaBoostRegressor.
+
+Gradient Boosted Trees
+- Sequential correction of predecessor's errors.
+- Does not tweak the weights of training instances.
+- Fit each predictor is trained using its predecessor's residual errors as labels.
+- Gradient Boosted Trees: a CART is used as a base learner.
+
+Gradient Boosted Regression:
+- y = y + ηr + ... + ηr
+- In sklearn: GradientBoostingRegressor .
+
+Gradient Boosted Classication:
+- In sklearn: GradientBoostingClassifier .
