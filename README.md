@@ -152,10 +152,21 @@ Bagging
 - It create subset by method sample by replacement. For example aaa,aab,aba,acc,aca etc.
 - On this subset, the models are trained.
 
-Bagging Classication:
+Bagging Classication
 - Aggregates predictions by majority voting (Final model is selected by voting).
 - BaggingClassifier in scikit-learn.
 
-Bagging Regression:
+Bagging Regression
 - Aggregates predictions through averaging (Final model is selected by avergaing).
 - BaggingRegressor in scikit-learn.
+
+Bagging limitations
+- Some instances may be sampled severaltimes for one model,
+- Other instances may not be sampled at all.
+
+Out Of Bag (OOB) instances
+- On average,for each model, 63% ofthe training instances are sampled.
+- The remaining 37% constitute the OOB instances.
+- Since OOB instances are not seen by the model during training.
+- This can be used to estimate the performance of the model without the need of cross validation.
+- This technique is known as OOB evaluation
